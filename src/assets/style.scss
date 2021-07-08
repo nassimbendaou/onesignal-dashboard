@@ -1,0 +1,309 @@
+// Color
+$brown: #2b2520;
+$green: #39dbc2;
+$pink: #f41fbf;
+$yellow: #ffed28;
+$purple: #b028ff;
+$blue: #1179db;
+$red: #ff3838;
+$orange: #db7953;
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+
+
+// Size
+
+
+/*
+.container {
+  
+  * {
+    margin: 20px 0;
+  }
+  
+  // Style 1, line text
+  .line-text {
+    $random-text: 'foreign terrace';
+    $stroke-width: $extra-large * 0.05;
+    position: relative;
+    display: inline-block;
+    font-size: $extra-large;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: white;
+    white-space: nowrap;
+    $x: 12px;
+    $y: 15px;
+    $step: 1px;
+        
+    text-shadow: $x $y $green,
+                 $x + $step $y + $step $pink,
+                 $x + $step * 2 $y + $step * 2 $pink,
+                 $x + $step * 3 $y + $step * 3 $pink,
+                 $x + $step * 4 $y + $step * 4 $pink,
+                 $x + $step * 5 $y + $step * 5 $pink,
+                 $x + $step * 6 $y + $step * 6 $pink,
+                 $x + $step * 7 $y + $step * 7 $pink,
+                 $x + $step * 8 $y + $step * 8 $pink,
+                 $x + $step * 9 $y + $step * 9 $pink,
+                 $x + $step * 10 $y + $step * 10 $pink,
+                 $x + $step * 11 $y + $step * 11 $pink,
+                 $x + $step * 12 $y + $step * 12 $pink,
+                 $x + $step * 13 $y + $step * 13 $pink,
+                 // $x + $step * 14 $y + $step * 14 $pink,
+                 // $x + $step * 15 $y + $step * 15 $pink,
+                 // $x + $step * 16 $y + $step * 16 $pink,
+                 // $x + $step * 17 $y + $step * 17 $pink,
+                 // $x + $step * 18 $y + $step * 18 $pink,
+                 // $x + $step * 19 $y + $step * 19 $pink,
+                 // $x + $step * 20 $y + $step * 20 $pink,
+                 // $x + $step * 21 $y + $step * 21 $pink,
+  }
+  
+  // Style 2, Neon text
+  .neon-text {
+    $random-text: 'underlying wire';
+    position: relative;
+    $stroke-width: $extra-large * 0.05;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    font-size: $extra-large;
+    color: lighten($blue, 25%);
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: lighten($blue, 5%);
+    @include center;
+    text-shadow: 0 0 40px lighten($blue, 5%),
+                 0 0 40px lighten($blue, 5%),
+                 0 0 40px lighten($blue, 5%);
+    &:after {
+      content: $random-text;
+      z-index: -1;
+      position: absolute;
+      color: transparent;
+      -webkit-text-stroke-width: $stroke-width;
+      -webkit-text-stroke-color: darken($blue, 40%);
+      top: -5%;
+      left: -0.5%;
+      
+    }
+  }
+  
+  // Style 3, Gradient strip text
+  .stripe-text {
+    position: relative;
+    $random-text: 'quick turnover';
+    $stroke-width: $extra-large * 0.05;
+     font-size: $extra-large;
+     text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Catamaran', sans-serif;
+    font-style: italic;
+    &:after {
+      position: absolute;
+      left: 0;
+      content: $random-text;
+      $stripe-size: 20px;
+      background: -webkit-repeating-linear-gradient(
+        135deg,
+        $pink,
+        $pink $stripe-size,
+        $yellow $stripe-size,
+        $yellow $stripe-size * 2,
+        $purple $stripe-size * 2,
+        $purple $stripe-size * 3,
+        $green $stripe-size * 3,
+        $green $stripe-size * 4
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-stroke-width: $stroke-width;
+      -webkit-text-stroke-color: white;
+    }
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: $random-text;
+      color: $pink;
+      top: 0px;
+      left: 0px;
+      $x: 5px;
+      $y: 0px;
+      $step: 1px;
+      text-shadow: $x $y $pink,
+                   $x + $step $y + $step $pink,
+                   $x + $step * 2 $y + $step * 2 $pink,
+                   $x + $step * 3 $y + $step * 3 $pink,
+                   $x + $step * 4 $y + $step * 4 $pink,
+                   $x + $step * 5 $y + $step * 5 $pink,
+                   $x + $step * 6 $y + $step * 6 $pink,
+                   $x + $step * 7 $y + $step * 7 $pink,
+                   $x + $step * 8 $y + $step * 8 $pink,
+                   $x + $step * 9 $y + $step * 9 $pink,
+                   $x + $step * 10 $y + $step * 10 $pink,
+    }
+  }
+  
+  // Style 4, cut text
+  .cut-text {
+    $random-text: 'stolen hour';
+    position: relative;
+    text-transform: uppercase;
+    font-size: $extra-large;
+    color: transparent;
+    font-weight: 900;
+    font-family: 'Catamaran', sans-serif;
+    font-style: italic;
+
+    &:after {
+      content: $random-text;
+      position: absolute;
+      left: -10px;
+      top: -2px;
+      color: white;
+      $path: polygon(0 25%, 100% 65%, 100% 100%, 0% 100%);
+      -webkit-clip-path: $path;
+      clip-path: $path;
+    }
+    
+    &:before {
+      content: $random-text;
+      position: absolute;
+      color: white;
+      $path: polygon(0 0, 110% 0, 100% 65%, 0 25%);
+      -webkit-clip-path: $path;
+      clip-path: $path;
+    }
+  }
+  */
+  // Style 5, cyber-text
+  .cyber-text {
+    $random-text: 'Global Outcomes';
+    position: relative;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Catamaran', sans-serif;
+    color:  rgba(#3f51b5, 0.8);
+ 
+ 
+  }
+  /*
+  // Style 6, wood-text
+  .wood-text {
+    $random-text: 'suitable villa';
+    background: url('https://i.imgur.com/OUyfQnt.jpg');
+    background-size: cover;
+    position: relative;
+    font-size: $extra-large * 1.5;
+    text-transform: uppercase;
+    font-family: 'Rancho', cursive;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    &:after {
+      $stroke-width: $extra-large * 0.05;
+      content: $random-text;
+      position: absolute;
+      -webkit-text-stroke-width: $stroke-width;
+      -webkit-text-stroke-color: rgba(black, 0.6);
+      left: 2px;
+      top: 2px
+    }
+  }
+  
+  // Style 7, comic text
+  .comic-text {
+    $random-text: 'square tube!';
+    $stroke-width: $extra-large * 0.35;
+    font-family: 'Molle', cursive;
+    position: relative;
+    font-size: $extra-large;
+    text-transform: uppercase;
+    word-spacing: -12px;
+    letter-spacing: -5px;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: white;
+    &:before {
+      position: absolute;
+      content: $random-text;
+      top: 3px;
+      left: 12px;
+      color: $yellow;
+      $stroke-width: $extra-large * 0.08;
+      -webkit-text-stroke-width: $stroke-width;
+      -webkit-text-stroke-color: lighten(black, 15%);
+    }
+    &:after {
+      position: absolute;
+      content: $random-text;
+      top: 0;
+      left: 0;
+      color: lighten($red, 5%);
+      $stroke-width: $extra-large * 0.06;
+      -webkit-text-stroke-width: $stroke-width;
+      -webkit-text-stroke-color: lighten(black, 15%);
+    }
+  }
+  
+  // Style 8, horizontal-cut-text
+  .horizontal-cut-text {
+      font-size: $extra-large * 1.2;
+      font-weight: 900;
+      font-family: 'Catamaran', sans-serif;
+      text-transform: uppercase;
+      $dark-pink: darken($pink, 10%);
+      $stripe-size: 3%;
+      background:
+      -webkit-linear-gradient(270deg, $dark-pink, $dark-pink 50%,      transparent 50%),
+      -webkit-repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent $stripe-size,
+        white $stripe-size,
+        white $stripe-size * 2,
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+        text-shadow: 6px 6px rgba(black, 0.4),
+  }
+  
+  // Style 9, double-border-text
+  .double-border-text {
+    $random-text: 'entire volume';
+    position: relative;
+    $stroke-width: $large * 0.2;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    font-size: $extra-large;
+    color: white;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: lighten(adjust-hue($yellow, -5%), 35%);
+
+    &:after {
+      content: $random-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-text-stroke-width: 0;
+      color: $orange;
+    }
+    
+    &:before {
+      z-index: -1;
+      content: $random-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-text-stroke-width: $stroke-width + 15px;
+      -webkit-text-stroke-color: $orange;
+    }
+  }
+}*/
