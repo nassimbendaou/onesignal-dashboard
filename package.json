@@ -21,7 +21,7 @@
     "date-fns": "^2.22.1",
     "emoji-picker-react": "^3.4.8",
     "firebase": "^8.6.5",
-    "luxon": "^1.27.0",
+    "luxon": "^1.28.1",
     "material-ui-pickers": "^2.2.4",
     "material-ui-popup-state": "^1.8.3",
     "node-sass": "^4.14.1",
